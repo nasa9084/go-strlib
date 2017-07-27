@@ -26,3 +26,43 @@ func TestSnakeCase(t *testing.T) {
 		}
 	}
 }
+
+func TestUpperCamelCase(t *testing.T) {
+	candidates := []struct {
+		snake string
+		camel string
+	}{
+		{"snake_case_string", "SnakeCaseString"},
+		{"lowerCamelCaseString", "LowerCamelCaseString"},
+		{"UpperCamelCaseString", "UpperCamelCaseString"},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.camel)
+		t.Logf("  Expected: %s\n", c.snake)
+		t.Logf("  Got: %s\n", strlib.UpperCamelCase(c.snake))
+		if strlib.UpperCamelCase(c.snake) != c.camel {
+			t.Errorf("%s != %s\n", strlib.UpperCamelCase(c.snake), c.camel)
+		}
+	}
+
+}
+
+func TestLowerCamelCase(t *testing.T) {
+	candidates := []struct {
+		snake string
+		camel string
+	}{
+		{"snake_case_string", "snakeCaseString"},
+		{"lowerCamelCaseString", "lowerCamelCaseString"},
+		{"UpperCamelCaseString", "upperCamelCaseString"},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.camel)
+		t.Logf("  Expected: %s\n", c.snake)
+		t.Logf("  Got: %s\n", strlib.LowerCamelCase(c.snake))
+		if strlib.LowerCamelCase(c.snake) != c.camel {
+			t.Errorf("%s != %s\n", strlib.LowerCamelCase(c.snake), c.camel)
+		}
+	}
+
+}
