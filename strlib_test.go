@@ -89,3 +89,45 @@ func TestCapitalize(t *testing.T) {
 		}
 	}
 }
+
+func TestIsUpper(t *testing.T) {
+	candidates := []struct {
+		in string
+		out bool
+	}{
+		{"lower string", false},
+		{"UPPER STRING", true},
+		{"UpperCamel", false},
+		{"lowerCamel", false},
+		{"withNumbercamel1", false},
+		{"WITH_NUMBER_UPPER1", true},
+		{"with_number_lower1", false},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.in)
+		if strlib.IsUpper(c.in) != c.out {
+			t.Errorf("%t != %t", strlib.IsUpper(c.in), c.out)
+		}
+	}
+}
+
+func TestIsLower(t *testing.T) {
+	candidates := []struct {
+		in string
+		out bool
+	}{
+		{"lower string", true},
+		{"UPPER STRING", false},
+		{"UpperCamel", false},
+		{"lowerCamel", false},
+		{"withNumbercamel1", false},
+		{"WITH_NUMBER_UPPER1", false},
+		{"with_number_lower1", true},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.in)
+		if strlib.IsLower(c.in) != c.out {
+			t.Errorf("%t != %t", strlib.IsLower(c.in), c.out)
+		}
+	}
+}

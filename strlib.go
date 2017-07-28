@@ -63,3 +63,19 @@ func LowerCamelCase(s string) string {
 func Capitalize(s string) string {
 	return strings.ToUpper(string(s[0])) + strings.ToLower(s[1:])
 }
+
+// IsUpper returns true if all cased characters in the string are uppercase
+func IsUpper(s string) bool {
+	if len(s) < 1 {
+		return false
+	}
+	return strings.ToUpper(s) == s
+}
+
+// IsLower returns true if all cased characters in the string are lowercase
+func IsLower(s string) bool {
+	if len(s) < 1 {
+		return false
+	}
+	return strings.ToLower(s) == s
+}
