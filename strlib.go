@@ -58,3 +58,8 @@ func LowerCamelCase(s string) string {
 	}
 	return buf.String()
 }
+
+// Capitalize returns a copy of the string with its first character capitalized and the rest lowercased
+func Capitalize(s string) string {
+	return strings.ToUpper(string(s[0])) + strings.ToLower(s[1:])
+}

@@ -66,3 +66,26 @@ func TestLowerCamelCase(t *testing.T) {
 	}
 
 }
+
+func TestCapitalize(t *testing.T) {
+	candidates := []struct {
+		in  string
+		out string
+	}{
+		{"lower", "Lower"},
+		{"Upper", "Upper"},
+		{"ALLUPPER", "Allupper"},
+		{"lower with spaces", "Lower with spaces"},
+		{"Upper with spaces", "Upper with spaces"},
+		{"Upper Title", "Upper title"},
+	}
+	for _, c := range candidates {
+		got := strlib.Capitalize(c.in)
+		t.Logf("Do: %s\n", c.in)
+		t.Logf("  Expected: %s\n", c.out)
+		t.Logf("  Got: %s\n", got)
+		if got != c.out {
+			t.Errorf("%s != %s\n", got, c.out)
+		}
+	}
+}
