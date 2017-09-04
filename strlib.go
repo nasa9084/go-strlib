@@ -9,21 +9,22 @@ import (
 
 // SnakeCase converts camel case to snake case.
 func SnakeCase(s string) string {
-	return snakeCase(s, []rune{}, false)
+	return string(snakeCase(s, []rune{}, false))
 }
 
-func snakeCase(s string, rs []rune, wasLower bool) string {
+func snakeCase(s string, rs []rune, wasLower bool) []rune {
 	if len(s) == 0 {
-		return string(rs)
+		return rs
 	}
 
 	r, size := utf8.DecodeRuneInString(s)
-	if unicode.IsUpper(r) && wasLower {
+	isUpper := unicode.IsUpper(r)
+	if isUpper && wasLower {
 		rs = append(rs, '_')
 	}
 	rs = append(rs, unicode.ToLower(r))
 
-	return snakeCase(s[size:], rs, unicode.IsLower(r))
+	return snakeCase(s[size:], rs, !isUpper)
 }
 
 // UpperCamelCase converts snake case to upper camel case
