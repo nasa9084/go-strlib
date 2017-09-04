@@ -102,6 +102,7 @@ func TestIsUpper(t *testing.T) {
 		{"withNumbercamel1", false},
 		{"WITH_NUMBER_UPPER1", true},
 		{"with_number_lower1", false},
+		{"", false},
 	}
 	for _, c := range candidates {
 		t.Logf("Do: %s\n", c.in)
@@ -123,6 +124,7 @@ func TestIsLower(t *testing.T) {
 		{"withNumbercamel1", false},
 		{"WITH_NUMBER_UPPER1", false},
 		{"with_number_lower1", true},
+		{"", false},
 	}
 	for _, c := range candidates {
 		t.Logf("Do: %s\n", c.in)
