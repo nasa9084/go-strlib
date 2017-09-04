@@ -18,15 +18,10 @@ func snakeCase(s string, rs []rune, wasLower bool) string {
 	}
 
 	r, size := utf8.DecodeRuneInString(s)
-
-	if unicode.IsUpper(r) {
-		if wasLower {
-			rs = append(rs, '_')
-		}
-		wasLower = false
-	} else { // if IsLower
-		wasLower = true
+	if unicode.IsUpper(r) && wasLower {
+		rs = append(rs, '_')
 	}
+	wasLower = unicode.IsLower(r)
 	rs = append(rs, unicode.ToLower(r))
 
 	return snakeCase(s[size:], rs, wasLower)
