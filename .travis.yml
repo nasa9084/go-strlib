@@ -2,6 +2,10 @@ language: go
 script:
 - go vet
 - go test
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+
 notifications:
   slack:
     secure: W4MjIwyX/RFFo4tGxQtk+29TMy+tpyCnA8VIq5WgvNGpVMp/VJCXxp9RmZ/eAinOfg4g7ELsDjauFHHsJgBi3QDvMJHLmj+4msYOuTWZxT67agnHVJa17R6K4uVck/kBIeB/FpuDkuKN2N+oAv/ydkDRcJeNVEC1NogSRVx/NR9ytYELcgEBzQ2hcMcUMqDGcaJRWLmfYSk8Dt5aKDlwLuPnkz/YN9sz2iYtn2Qh3ddcaedqye7snZ+go1TDbxTsyl4V5NIk27DI6lrZ9ddiEWXdwSdSzRtgFs/SQX9i88lZKmTDvviD3/4J7Y6K4kk8vnb9z2NfCwYFnjaaf5morn5cUOowUM7oN4XP895gpwj7ojYkujmGuQdqBHi7D15QRlwx4/4fE+FxuCdyGf18F6oRjt+WqHpzp8eWkpjqR932pNkhW31QlzmYbUf5AjfiaGRQemP5uf4GbH8Ypch6wLQ6q+16iNgdFYpGv8IHK1y70uKfg5qnZ/fPtOLlC93liFpMJEEUkQHVZ77vERY1R2m0TrJXkvI+LFf533J3uZ7nYF4UK5M1UE6wepJZnEFB2wrgr9X35K8RjdqbzxMF6PxhgOg/jUksUaajCkHneZ4D/FvOXNdMQwOmh0dxlV9jPADiNyAaA3sJ0yDr4+ydwrSUUTW3EQeUEm42Y7ftu/Q=
