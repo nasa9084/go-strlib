@@ -133,3 +133,9 @@ func TestIsLower(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkLowerCamelCase(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		strlib.LowerCamelCase(`something snake_case and UpperCamel`)
+	}
+}
