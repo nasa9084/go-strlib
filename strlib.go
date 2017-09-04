@@ -46,15 +46,15 @@ func LowerCamelCase(s string) string {
 	if len(ss) == 1 {
 		return strings.ToLower(string(s[0])) + s[1:]
 	}
-	buf := bytes.Buffer{}
+	b := []byte{}
 	for i, p := range ss {
 		if i == 0 {
-			buf.WriteString(strings.ToLower(string(p[0])) + p[1:])
+			b = append(b, strings.ToLower(string(p[0])) + p[1:]...)
 			continue
 		}
-		buf.WriteString(strings.ToUpper(string(p[0])) + strings.ToLower(p[1:]))
+		b = append(b, strings.ToUpper(string(p[0])) + strings.ToLower(p[1:])...)
 	}
-	return buf.String()
+	return string(b)
 }
 
 // Capitalize returns a copy of the string with its first character capitalized and the rest lowercased
