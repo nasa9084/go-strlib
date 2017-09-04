@@ -21,10 +21,9 @@ func snakeCase(s string, rs []rune, wasLower bool) string {
 	if unicode.IsUpper(r) && wasLower {
 		rs = append(rs, '_')
 	}
-	wasLower = unicode.IsLower(r)
 	rs = append(rs, unicode.ToLower(r))
 
-	return snakeCase(s[size:], rs, wasLower)
+	return snakeCase(s[size:], rs, unicode.IsLower(r))
 }
 
 // UpperCamelCase converts snake case to upper camel case
