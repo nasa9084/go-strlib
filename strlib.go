@@ -18,7 +18,6 @@ func snakeCase(s string, rs []rune, wasLower bool) string {
 	}
 
 	r, size := utf8.DecodeRuneInString(s)
-	s = s[size:]
 
 	if unicode.IsUpper(r) {
 		if wasLower {
@@ -30,7 +29,7 @@ func snakeCase(s string, rs []rune, wasLower bool) string {
 	}
 	rs = append(rs, unicode.ToLower(r))
 
-	return snakeCase(s, rs, wasLower)
+	return snakeCase(s[size:], rs, wasLower)
 }
 
 // UpperCamelCase converts snake case to upper camel case
