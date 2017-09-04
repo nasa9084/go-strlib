@@ -5,11 +5,11 @@ go:
   - 1.9
 
 script:
-- go vet
-- go test
+  - go vet
+  - go test
 
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   slack:
