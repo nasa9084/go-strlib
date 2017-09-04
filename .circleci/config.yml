@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/golang:1.8
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: go test -v
