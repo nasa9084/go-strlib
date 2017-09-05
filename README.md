@@ -5,5 +5,6 @@
 [![GoDoc](https://godoc.org/github.com/nasa9084/go-strlib?status.svg)](https://godoc.org/github.com/nasa9084/go-strlib)
 [![codebeat badge](https://codebeat.co/badges/356a7250-a906-47a2-b92b-431cb0be9bea)](https://codebeat.co/projects/github-com-nasa9084-go-strlib-master)
 [![Coverage Status](https://coveralls.io/repos/github/nasa9084/go-strlib/badge.svg?branch=master)](https://coveralls.io/github/nasa9084/go-strlib?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8100eb9c871640abbc76ae0985a5577f)](https://www.codacy.com/app/nasa9084/go-strlib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nasa9084/go-strlib&amp;utm_campaign=Badge_Grade)
 
 String manipulation library
