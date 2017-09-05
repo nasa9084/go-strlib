@@ -9,7 +9,6 @@ build:
     - go get -u github.com/jstemmer/go-junit-report
     - go vet ./...
     - go test -v ./... 2>&1 | go-junit-report > shippable/testresults/results.xml
-    - go get code.google.com/p/go.tools/cmd/cover
     - go get github.com/t-yuki/gocover-cobertura
     - go test -coverprofile=coverage.txt -covermode count ./...
     - gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
