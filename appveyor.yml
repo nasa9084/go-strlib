@@ -1,0 +1,3 @@
+version: "{build}"
+build_script:
+- go test -v -race ./...
