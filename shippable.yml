@@ -12,4 +12,4 @@ build:
     - go get github.com/axw/gocov/gocov
     - go get github.com/AlekSi/gocov-xml
     - go test -coverprofile=cover.out ./...
-    - gocov convert cover.out | gocov-xml > shippable/codecoverage/coverage.xml
+    - gocov convert cover.out | gocov-xml > shippable/codecoverage/results.xml
