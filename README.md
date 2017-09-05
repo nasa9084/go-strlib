@@ -12,5 +12,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8100eb9c871640abbc76ae0985a5577f)](https://www.codacy.com/app/nasa9084/go-strlib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nasa9084/go-strlib&amp;utm_campaign=Badge_Grade)
 [![BCH compliance](https://bettercodehub.com/edge/badge/nasa9084/go-strlib?branch=master)](https://bettercodehub.com/)
 [![codecov](https://codecov.io/gh/nasa9084/go-strlib/branch/master/graph/badge.svg)](https://codecov.io/gh/nasa9084/go-strlib)
+[![Run Status](https://api.shippable.com/projects/59ae40b7e5b1890700b17c91/badge?branch=master)](https://app.shippable.com/github/nasa9084/go-strlib)
+[![Coverage Badge](https://api.shippable.com/projects/59ae40b7e5b1890700b17c91/coverageBadge?branch=master)](https://app.shippable.com/github/nasa9084/go-strlib)
 
 String manipulation library
