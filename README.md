@@ -4,6 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/48k6q7u5t8pwbdiw/branch/master?svg=true)](https://ci.appveyor.com/project/nasa9084/go-strlib/branch/master)
 [![buddy pipeline](https://app.buddy.works/nasa9084bassclarinet/go-strlib/pipelines/pipeline/58806/badge.svg?token=69cad983397c8475c7dada70bad57da91b82a41393901cc7fea88078d39b0d1f "buddy pipeline")](https://app.buddy.works/nasa9084bassclarinet/go-strlib/pipelines/pipeline/58806)
 [ ![Codeship Status for nasa9084/go-strlib](https://app.codeship.com/projects/5918a190-742b-0135-cdd9-5adc5c5e3db7/status?branch=master)](https://app.codeship.com/projects/243871)
+[![wercker status](https://app.wercker.com/status/77debe5ab138e3bae767454974259eb7/s/master "wercker status")](https://app.wercker.com/project/byKey/77debe5ab138e3bae767454974259eb7)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![GoDoc](https://godoc.org/github.com/nasa9084/go-strlib?status.svg)](https://godoc.org/github.com/nasa9084/go-strlib)
 [![codebeat badge](https://codebeat.co/badges/356a7250-a906-47a2-b92b-431cb0be9bea)](https://codebeat.co/projects/github-com-nasa9084-go-strlib-master)
