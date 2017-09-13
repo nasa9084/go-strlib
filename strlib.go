@@ -49,10 +49,10 @@ func LowerCamelCase(s string) string {
 	b := []byte{}
 	for i, p := range ss {
 		if i == 0 {
-			b = append(b, strings.ToLower(string(p[0])) + p[1:]...)
+			b = append(b, strings.ToLower(string(p[0]))+p[1:]...)
 			continue
 		}
-		b = append(b, strings.ToUpper(string(p[0])) + strings.ToLower(p[1:])...)
+		b = append(b, strings.ToUpper(string(p[0]))+strings.ToLower(p[1:])...)
 	}
 	return string(b)
 }

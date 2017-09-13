@@ -92,7 +92,7 @@ func TestCapitalize(t *testing.T) {
 
 func TestIsUpper(t *testing.T) {
 	candidates := []struct {
-		in string
+		in  string
 		out bool
 	}{
 		{"lower string", false},
@@ -114,7 +114,7 @@ func TestIsUpper(t *testing.T) {
 
 func TestIsLower(t *testing.T) {
 	candidates := []struct {
-		in string
+		in  string
 		out bool
 	}{
 		{"lower string", true},
