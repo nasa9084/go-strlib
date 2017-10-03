@@ -1,6 +1,7 @@
 # go-strlib
 [![Build Status](https://travis-ci.org/nasa9084/go-strlib.svg?branch=master)](https://travis-ci.org/nasa9084/go-strlib)
 [![CircleCI](https://circleci.com/gh/nasa9084/go-strlib/tree/master.svg?style=svg)](https://circleci.com/gh/nasa9084/go-strlib/tree/master)
+[![Build Status](https://semaphoreci.com/api/v1/nasa9084/go-strlib/branches/master/badge.svg)](https://semaphoreci.com/nasa9084/go-strlib)
 [![Build status](https://ci.appveyor.com/api/projects/status/48k6q7u5t8pwbdiw/branch/master?svg=true)](https://ci.appveyor.com/project/nasa9084/go-strlib/branch/master)
 [![buddy pipeline](https://app.buddy.works/nasa9084bassclarinet/go-strlib/pipelines/pipeline/58806/badge.svg?token=69cad983397c8475c7dada70bad57da91b82a41393901cc7fea88078d39b0d1f "buddy pipeline")](https://app.buddy.works/nasa9084bassclarinet/go-strlib/pipelines/pipeline/58806)
 [ ![Codeship Status for nasa9084/go-strlib](https://app.codeship.com/projects/5918a190-742b-0135-cdd9-5adc5c5e3db7/status?branch=master)](https://app.codeship.com/projects/243871)
