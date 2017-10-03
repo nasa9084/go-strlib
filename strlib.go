@@ -77,3 +77,13 @@ func IsLower(s string) bool {
 	}
 	return strings.ToLower(s) == s
 }
+
+// Reverse returns reversed string
+func Reverse(s string) string {
+	length := len(s)
+	r := make([]byte, length)
+	for i := 0; i < length/2+1; i++ {
+		r[i], r[length-i-1] = s[length-i-1], s[i]
+	}
+	return string(r)
+}

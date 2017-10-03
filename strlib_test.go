@@ -134,6 +134,23 @@ func TestIsLower(t *testing.T) {
 	}
 }
 
+func TestReverse(t *testing.T) {
+	candidates := []struct {
+		in string
+		out string
+	}{
+		{"evenstring", "gnirtsneve"},
+		{"oddstring", "gnirtsddo"},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.in)
+		if strlib.Reverse(c.in) != c.out {
+			t.Errorf("%s != %s", strlib.Reverse(c.in), c.out)
+			return
+		}
+	}
+}
+
 func BenchmarkLowerCamelCase(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		strlib.LowerCamelCase(`something snake_case and UpperCamel`)
