@@ -49,10 +49,10 @@ func LowerCamelCase(s string) string {
 	b := []byte{}
 	for i, p := range ss {
 		if i == 0 {
-			b = append(b, strings.ToLower(string(p[0])) + p[1:]...)
+			b = append(b, strings.ToLower(string(p[0]))+p[1:]...)
 			continue
 		}
-		b = append(b, strings.ToUpper(string(p[0])) + strings.ToLower(p[1:])...)
+		b = append(b, strings.ToUpper(string(p[0]))+strings.ToLower(p[1:])...)
 	}
 	return string(b)
 }
@@ -76,4 +76,14 @@ func IsLower(s string) bool {
 		return false
 	}
 	return strings.ToLower(s) == s
+}
+
+// Reverse returns reversed string
+func Reverse(s string) string {
+	length := len(s)
+	r := make([]byte, length)
+	for i := 0; i < length/2+1; i++ {
+		r[i], r[length-i-1] = s[length-i-1], s[i]
+	}
+	return string(r)
 }

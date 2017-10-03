@@ -92,7 +92,7 @@ func TestCapitalize(t *testing.T) {
 
 func TestIsUpper(t *testing.T) {
 	candidates := []struct {
-		in string
+		in  string
 		out bool
 	}{
 		{"lower string", false},
@@ -114,7 +114,7 @@ func TestIsUpper(t *testing.T) {
 
 func TestIsLower(t *testing.T) {
 	candidates := []struct {
-		in string
+		in  string
 		out bool
 	}{
 		{"lower string", true},
@@ -130,6 +130,23 @@ func TestIsLower(t *testing.T) {
 		t.Logf("Do: %s\n", c.in)
 		if strlib.IsLower(c.in) != c.out {
 			t.Errorf("%t != %t", strlib.IsLower(c.in), c.out)
+		}
+	}
+}
+
+func TestReverse(t *testing.T) {
+	candidates := []struct {
+		in string
+		out string
+	}{
+		{"evenstring", "gnirtsneve"},
+		{"oddstring", "gnirtsddo"},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.in)
+		if strlib.Reverse(c.in) != c.out {
+			t.Errorf("%s != %s", strlib.Reverse(c.in), c.out)
+			return
 		}
 	}
 }
