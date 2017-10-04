@@ -15,5 +15,7 @@
 [![codecov](https://codecov.io/gh/nasa9084/go-strlib/branch/master/graph/badge.svg)](https://codecov.io/gh/nasa9084/go-strlib)
 [![Run Status](https://api.shippable.com/projects/59ae40b7e5b1890700b17c91/badge?branch=master)](https://app.shippable.com/github/nasa9084/go-strlib)
 [![Coverage Badge](https://api.shippable.com/projects/59ae40b7e5b1890700b17c91/coverageBadge?branch=master)](https://app.shippable.com/github/nasa9084/go-strlib)
+[![Code Climate](https://codeclimate.com/github/nasa9084/go-strlib/badges/gpa.svg)](https://codeclimate.com/github/nasa9084/go-strlib)
+[![Issue Count](https://codeclimate.com/github/nasa9084/go-strlib/badges/issue_count.svg)](https://codeclimate.com/github/nasa9084/go-strlib)
 
 String manipulation library
