@@ -96,6 +96,23 @@ func IsAlpha(s string) bool {
 	return true
 }
 
+const (
+	space = 32
+	tab   = 9
+	newline = 10
+)
+
+// IsSpace returns true if all characters in the string are whitespace character
+func IsSpace(s string) bool {
+	for _, r := range s {
+		i := int(r)
+		if i != space && i != tab && i != newline {
+			return false
+		}
+	}
+	return true
+}
+
 // Reverse returns reversed string
 func Reverse(s string) string {
 	length := len(s)

@@ -163,11 +163,33 @@ func TestIsAlpha(t *testing.T) {
 		{"!", false},
 		{"10!", false},
 		{"alphabet with space", false},
+		{"にほんご", false},
 	}
 	for _, c := range candidates {
 		t.Logf("Do: %s\n", c.in)
 		if strlib.IsAlpha(c.in) != c.out {
 			t.Errorf("%t != %t", strlib.IsAlpha(c.in), c.out)
+			return
+		}
+	}
+}
+
+func TestIsSpace(t *testing.T) {
+	candidates := []struct {
+		in string
+		out bool
+	}{
+		{" ", true},
+		{"	", true},
+		{`
+`, true},
+		{"alpha", false},
+		{"10000", false},
+		{"にほんご", false},
+	}
+	for _, c := range candidates {
+		if strlib.IsSpace(c.in) != c.out {
+			t.Errorf("%t != %t", strlib.IsSpace(c.in), c.out)
 			return
 		}
 	}
