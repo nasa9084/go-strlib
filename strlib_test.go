@@ -136,7 +136,7 @@ func TestIsLower(t *testing.T) {
 
 func TestReverse(t *testing.T) {
 	candidates := []struct {
-		in string
+		in  string
 		out string
 	}{
 		{"evenstring", "gnirtsneve"},
@@ -146,6 +146,28 @@ func TestReverse(t *testing.T) {
 		t.Logf("Do: %s\n", c.in)
 		if strlib.Reverse(c.in) != c.out {
 			t.Errorf("%s != %s", strlib.Reverse(c.in), c.out)
+			return
+		}
+	}
+}
+
+func TestIsAlpha(t *testing.T) {
+	candidates := []struct {
+		in  string
+		out bool
+	}{
+		{"alpha", true},
+		{"alnum0", false},
+		{"10", false},
+		{"alsym!", false},
+		{"!", false},
+		{"10!", false},
+		{"alphabet with space", false},
+	}
+	for _, c := range candidates {
+		t.Logf("Do: %s\n", c.in)
+		if strlib.IsAlpha(c.in) != c.out {
+			t.Errorf("%t != %t", strlib.IsAlpha(c.in), c.out)
 			return
 		}
 	}

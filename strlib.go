@@ -78,6 +78,24 @@ func IsLower(s string) bool {
 	return strings.ToLower(s) == s
 }
 
+const (
+	upperA = 65
+	upperZ = 90
+	lowera = 97
+	lowerz = 122
+)
+
+// IsAlpha returns true if all characters are alphabet
+func IsAlpha(s string) bool {
+	for _, r := range s {
+		i := int(r)
+		if i < upperA || (upperZ < i && i < lowera) || lowerz < i {
+			return false
+		}
+	}
+	return true
+}
+
 // Reverse returns reversed string
 func Reverse(s string) string {
 	length := len(s)
