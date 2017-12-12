@@ -97,8 +97,8 @@ func IsAlpha(s string) bool {
 }
 
 const (
-	space = 32
-	tab   = 9
+	space   = 32
+	tab     = 9
 	newline = 10
 )
 
